@@ -5,14 +5,13 @@ async function getPokemon() {
 
     
     for (let i = 0; i < length(pokemon); i++){
-        const response = await fetch("https://pokeapi.co/api/v2/pokemon/" + pokemon[i] + "/")
+        const response = await fetch("https://pokeapi.co/api/v2/pokemon/" + pokemon[i])
         const data = await response.json()
 
-        buildCard(data.name, data.types, 0, 0, 0, 0, 0, 0, data.abilities, data.height, data.weight, data.sprites.front_default)
-
+        //buildCard(data.name, data.types, data.characteristic.highest_stat.hp, "", "", "", "", data.stats.speed, data.abilities, data.height, data.weight, data.sprites.front_default)
+        buildCard(data.name, "", "", "", "", "", "", "", "", "", "", "")
     }
 
-ty
 }
 
 /**
